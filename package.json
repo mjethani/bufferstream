@@ -1,0 +1,25 @@
+{
+  "name": "node-bufferstream",
+  "version": "0.1.0",
+  "description": "A duplex stream that reads from and writes to a Node.js Buffer object",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjethani/bufferstream.git"
+  },
+  "keywords": [
+    "node",
+    "buffer",
+    "stream"
+  ],
+  "author": {
+    "name": "Manish Jethani",
+    "email": "manish.jethani@gmail.com",
+    "url": "http://manishjethani.com/"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjethani/bufferstream/issues"
+  },
+  "homepage": "https://github.com/mjethani/bufferstream#readme"
+}
