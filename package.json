@@ -1,6 +1,6 @@
 {
   "name": "node-bufferstream",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A duplex stream that reads from and writes to a Node.js Buffer object",
   "main": "index.js",
   "repository": {
