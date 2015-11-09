@@ -13,17 +13,17 @@ BufferStream.prototype = new stream.Duplex()
 BufferStream.prototype.constructor = BufferStream
 
 BufferStream.prototype._read = function (size) {
-  var chunk = this.__buffer.slice(this.__cursor, size)
-
-  if (chunk.length > 0) {
-    this.__cursor += chunk.length
-
-    this.push(chunk)
-  }
-
   if (this.__cursor === this.__buffer.length) {
     this.push(null)
+
+    return
   }
+
+  var chunk = this.__buffer.slice(this.__cursor, size)
+
+  this.__cursor += chunk.length
+
+  this.push(chunk)
 }
 
 BufferStream.prototype._write = function (chunk, encoding, callback) {
@@ -34,6 +34,7 @@ BufferStream.prototype._write = function (chunk, encoding, callback) {
     ])
 
     callback()
+
   } catch (error) {
     callback(error)
   }
